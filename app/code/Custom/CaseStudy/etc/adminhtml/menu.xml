@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Custom_CaseStudy::content_elements"
+             title="Case Study Management"
+             translate="title"
+             module="Custom_CaseStudy"
+             sortOrder="10"
+             parent="Magento_Backend::content"
+             resource="Magento_Backend::admin"/>
+        <add id="Custom_CaseStudy::CaseStudy"
+             title="Case Study"
+             translate="title"
+             module="Custom_CaseStudy"
+             sortOrder="0"
+             parent="Custom_CaseStudy::content_elements"
+             action="custom_casestudy/casestudy"
+             resource="Magento_Backend::admin"/>
+    </menu>
+</config>

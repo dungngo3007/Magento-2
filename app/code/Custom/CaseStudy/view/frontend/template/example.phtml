@@ -1,0 +1,13 @@
+<?php
+
+/** @var \Custom\CaseStudy\Block\Example $block */
+$caseStudy = $block->getDataInfo();
+?>
+
+<?php if($caseStudy):?>
+    <?php echo $caseStudy->getTitle();?>
+    <?php echo '<pre>'; print_r($caseStudy->debug())?>
+<?php endif; ?>
+
+
+

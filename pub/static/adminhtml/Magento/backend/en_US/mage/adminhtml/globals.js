@@ -1,0 +1,1 @@
+/var/www/html/FirstProject/lib/web/mage/adminhtml/globals.js

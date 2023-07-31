@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="alpha_margin" resource="default" engine="innodb" comment="Test table">
+        <column xsi:type="text" name="name" nullable="false" comment="Name"/>
+        <column xsi:type="int" name="index" nullable="false" identity="false" comment="Index"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="true" comment="Create Time"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="false" nullable="true" comment="Update Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="index"/>
+        </constraint>
+    </table>
+</schema>

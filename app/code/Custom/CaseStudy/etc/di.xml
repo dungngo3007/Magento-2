@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Custom\CaseStudy\Api\Data\CaseStudyInterface" type="Custom\CaseStudy\Model\CaseStudy" />
+    <preference for="Custom\CaseStudy\Api\CaseStudyRepositoryInterface" type="Custom\CaseStudy\Service\CaseStudyRepository" />
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="casestudy_listing_data_source" xsi:type="string">Custom\CaseStudy\Model\ResourceModel\CaseStudy\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Custom\CaseStudy\Model\ResourceModel\CaseStudy\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">case_study</argument>
+            <argument name="eventPrefix" xsi:type="string">case_study_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">case_study_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">\Custom\CaseStudy\Model\ResourceModel\CaseStudy</argument>
+        </arguments>
+    </type>
+</config>
